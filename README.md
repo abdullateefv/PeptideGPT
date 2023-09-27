@@ -3,4 +3,5 @@ GPT powered plugin &amp; fine tuned model for natural language interaction with 
 
 ## Demo
 
-[!Demo](GPTPluginFiles/demo.png)
+![Demo](./GPTPluginFiles/demo.png)
+
