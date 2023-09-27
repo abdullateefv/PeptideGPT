@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Peptide Energy Plugin",
+  "name_for_model": "peptideEnergy",
+  "description_for_human": "Plugin for calculating the binding energy of a given peptide sequence to the VEGFR2 Receptor.",
+  "description_for_model": "Plugin for calculating the energy of a given peptide sequence to the VEGFR2 Receptor. You can enter a peptide sequence and it will return the energy value. Use keywords 'sequence' and 'energy' to prompt the plugin.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://hoster.abdullateef2.repl.co/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png",
+  "contact_email": "support@peptide-energy.com",
+  "legal_info_url": "http://www.peptide-energy.com/legal"
+}

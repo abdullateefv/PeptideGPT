@@ -1,0 +1,49 @@
+openapi: 3.0.1
+info:
+  title: Peptide Energy Plugin
+  description: A plugin that allows the user to calculate the energy of a given peptide sequence to VEGFR2 using ChatGPT.
+  version: 'v1'
+servers:
+  - url: https://hoster.abdullateef2.repl.co
+paths:
+  /dock:
+    get:
+      operationId: getEnergy
+      summary: Get the energy of a peptide sequence
+      parameters:
+        - name: sequence
+          in: query
+          description: The peptide sequence to calculate binding energy to VEGFR2 for
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getEnergyResponse'
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorResponse'
+components:
+  schemas:
+    getEnergyResponse:
+      type: object
+      properties:
+        sequence:
+          type: string
+          description: The peptide sequence.
+        energy:
+          type: number
+          description: The binding energy of the peptide sequence to VEGFR2.
+    errorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message.
